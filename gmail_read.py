@@ -133,6 +133,7 @@ for mssg in mssg_list:
         m2 = re.search('gl=[a-z]{2}(.*) To', Snip)
         TXT = m2.group(1)
         #TXT = match.group(1)
+        #=ARRAYFORMULA(IF(LEN(A2:A), (IF(REGEXMATCH(D2:D,"gl="),REGEXEXTRACT(D2:D, "((\s*[-+]?[\d]{1,2}\.\d+)\,(\s*[-+]?[\d]{1,3}\.\d+))"), REGEXEXTRACT(E3:E, "(([\d]{1,2}\.\d+)\,(\s*[-+]?[\d]{1,3}\.\d+))")))))
     geo = re.search('([\d]{2,3}\.\d*),([-+]?[\d]{2,3}\.[\d]*)', Snip)
     LON = geo.group(1)
     LAT = geo.group(2)
